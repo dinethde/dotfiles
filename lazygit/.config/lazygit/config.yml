@@ -1,0 +1,6 @@
+customCommands:
+  - key: "C"
+    command: '/bin/zsh -l -c ''git diff --cached | /Users/dinethdesilva/Library/Python/3.9/bin/sgpt "Write a concise git commit message for this diff. Output only the commit message, nothing else." | GIT_EDITOR=true git commit -F -'''
+    context: "files"
+    subprocess: true
+    description: "AI commit message"
