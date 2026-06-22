@@ -6,8 +6,12 @@ customCommands:
     prompts:
       - type: "menuFromCommand"
         title: "AI Commit Message"
-        key: "Msg"
+        key: "AiMsg"
         command: "/bin/zsh -l -c 'git diff --cached | /Users/dinethdesilva/Library/Python/3.9/bin/sgpt \"Write a concise git commit message, output only the message, no markdown, no quotes\"'"
         filter: '^(?P<msg>.+)$'
         valueFormat: '{{.msg}}'
         labelFormat: '{{.msg | green}}'
+      - type: "input"
+        title: "Edit Commit Message"
+        key: "Msg"
+        initialValue: "{{.Form.AiMsg}}"
