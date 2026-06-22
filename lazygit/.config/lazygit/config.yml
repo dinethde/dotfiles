@@ -1,6 +1,13 @@
 customCommands:
-  - key: "C"
-    command: '/bin/zsh -l -c ''git diff --cached | /Users/dinethdesilva/Library/Python/3.9/bin/sgpt "Write a concise git commit message for this diff. Output only the commit message, nothing else." | GIT_EDITOR=true git commit -F -'''
+  - key: "c"
     context: "files"
-    subprocess: true
-    description: "AI commit message"
+    description: "AI commit"
+    command: 'git commit -m "{{.Form.Msg}}"'
+    prompts:
+      - type: "menuFromCommand"
+        title: "AI Commit Message"
+        key: "Msg"
+        command: "/bin/zsh -l -c 'git diff --cached | /Users/dinethdesilva/Library/Python/3.9/bin/sgpt \"Write a concise git commit message, output only the message, no markdown, no quotes\"'"
+        filter: '^(?P<msg>.+)$'
+        valueFormat: '{{.msg}}'
+        labelFormat: '{{.msg | green}}'
