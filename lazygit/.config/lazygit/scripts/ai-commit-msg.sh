@@ -1,6 +1,6 @@
 #!/bin/zsh -l
 
-PROMPT="Write a concise git commit message, output only the message, no markdown, no quotes"
+PROMPT="Analyze the git diff below and write a commit message following the Conventional Commits format (type: description). Types: feat, fix, docs, style, refactor, test, chore. Rules: 1) First line under 72 characters, 2) Use imperative mood, 3) Describe what changed not why, 4) No period at end, 5) Output ONLY the commit message text, nothing else."
 DIFF=$(git diff --cached)
 
 if [ -z "$DIFF" ]; then
