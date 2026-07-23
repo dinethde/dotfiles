@@ -9,7 +9,6 @@ source $(brew --prefix nvm)/nvm.sh
 # Source .env for API keys (not tracked in git)
 source "$HOME/dotfiles/zsh/.env"
 
-
 # bun completions
 [ -s "/Users/dinethdesilva/.bun/_bun" ] && source "/Users/dinethdesilva/.bun/_bun"
 
