@@ -13,6 +13,6 @@ PAYLOAD=$(jq -n \
   --arg diff "$DIFF" \
   '{contents: [{parts: [{text: ($prompt + "\n\n" + $diff)}]}]}')
 
-curl -s "${GEMINI_BASE_URL}/models/${DEFAULT_MODEL}:generateContent?key=$OPENAI_API_KEY" \
+curl -s "${GEMINI_BASE_URL}/models/${DEFAULT_MODEL}:generateContent?key=$GEMINI_API_KEY" \
   -H "Content-Type: application/json" \
   -d "$PAYLOAD" | jq -r '.candidates[0].content.parts[0].text'
