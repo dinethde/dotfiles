@@ -16,3 +16,18 @@ PAYLOAD=$(jq -n \
 curl -s "${GEMINI_BASE_URL}/models/${DEFAULT_MODEL}:generateContent?key=$GEMINI_API_KEY" \
   -H "Content-Type: application/json" \
   -d "$PAYLOAD" | jq -r '.candidates[0].content.parts[0].text'
+
+# Testing curl
+# curl -s "${GEMINI_BASE_URL}/models/${DEFAULT_MODEL}:generateContent?key=$GEMINI_API_KEY" \
+#   -H "Content-Type: application/json" \
+#   -d '{
+#     "contents": [
+#       {
+#         "parts": [
+#           {
+#             "text": "Hello gemini"
+#           }
+#         ]
+#       }
+#     ]
+#   }'
