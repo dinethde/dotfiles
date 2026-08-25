@@ -111,3 +111,12 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Claude Code state directory (~/.claude) - this holds live runtime/session
+# data (auth tokens, session transcripts, shell snapshots, caches, binaries),
+# not config. Only track the intentional config files.
+claude/.claude/*
+!claude/.claude/settings.json
+!claude/.claude/CLAUDE.md
+!claude/.claude/commands
+!claude/.claude/commands/**
