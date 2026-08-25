@@ -156,8 +156,8 @@ alt-h = 'focus left --ignore-floating'
 alt-j = 'focus down --ignore-floating'
 alt-k = 'focus up --ignore-floating'
 alt-l = 'focus right --ignore-floating'
-
-alt-x = 'mode nextprev --empty'
+alt-ctrl-j = 'focus dfs-next'
+alt-ctrl-k = 'focus dfs-prev'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move
 alt-shift-h = 'move left'
@@ -197,14 +197,6 @@ alt-w = 'exec-and-forget open -a /Applications/WezTerm.app'
 alt-f = 'exec-and-forget open -a /System/Library/CoreServices/Finder.app'
 alt-e = 'exec-and-forget open -a "/Applications/Final Cut Pro.app"'
 alt-z = 'exec-and-forget open -a /Applications/Zen.app'
-
-
-# 'service' binding mode declaration.
-# See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
-[mode.nextprev.binding]
-j = 'focus dfs-next'
-k = 'focus dfs-prev'
-esc = 'mode main'
 
 [mode.service.binding]
 esc = ['reload-config', 'mode main']
