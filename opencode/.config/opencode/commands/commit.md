@@ -19,16 +19,57 @@ Create atomic commits from all pending changes. Each commit must be one logical 
 
 ## Commit Message Rules
 
-Write each commit message following these rules:
+**Always** follow these rules for every commit. These are mandatory, not optional:
 
-- **Summary line**: Under 50 characters, imperative mood ("Add", "Fix", "Update" — not "Added" or "Adds"), no period at the end. Capitalize the first word.
-- **Blank line**: Required between summary and body. Many tools rely on this separator.
-- **Body**: Explain the "why" not the "what". Cover the problem being solved, reasoning, and tradeoffs. Wrap at ~72 characters per line.
-- **Type prefixes**: If using a type prefix (e.g., `feat:`, `fix:`, `chore:`), keep the description lowercase after the colon. Example: `chore: implement retry logic`. Without a prefix, capitalize the first word per classic Git convention.
-- **Body casing**: Use normal sentence casing in the body (capitalize first word of each sentence).
-- **Paragraph vs bullets**: Use a short paragraph for single reasoning, bullets for multiple distinct changes, or combine both.
-- **Breaking changes**: Note any breaking changes or side effects explicitly.
-- **Proofread**: Treat it like a professional email — it becomes permanent project history.
+### Format
+
+Every commit MUST use this structure:
+
+```
+<type>: <heading>
+
+<body (optional)>
+```
+
+### Type prefix (ALWAYS required)
+
+Every commit summary line MUST start with a lowercase type prefix followed by a colon and a space:
+
+- `feat:` — new feature or functionality
+- `fix:` — bug fix
+- `refactor:` — code restructuring without behavior change
+- `docs:` — documentation changes
+- `chore:` — maintenance, tooling, config, dependencies
+- `perf:` — performance improvement
+- `test:` — adding or updating tests
+- `style:` — formatting, whitespace, linting (no behavior change)
+- `build:` — build system or external dependency changes
+- `ci:` — CI configuration changes
+
+After the prefix, the description stays lowercase (e.g., `feat: add user dashboard`, NOT `feat: Add user dashboard`).
+
+### Heading
+
+- Keep the heading under 50 characters total (including prefix)
+- Imperative mood: "Add", "Fix", "Update" — not "Added" or "Adds"
+- No period at the end
+
+### Body (only when necessary)
+
+- Include a body ONLY when the change needs explanation beyond the heading
+- If the heading fully explains the change, omit the body entirely
+- When a body is included, add a blank line after the heading
+- Explain the "why" not the "what" — cover the problem being solved, reasoning, and tradeoffs
+- Wrap at ~72 characters per line
+- Use normal sentence casing in the body
+
+### Additional rules
+
+- Never create a commit that mixes unrelated changes
+- If a single file contains changes for multiple logical units, stage only the relevant hunks (use `git add -p` if needed)
+- Never commit secrets or keys
+- Proofread before committing — it becomes permanent project history
+- Note any breaking changes or side effects explicitly in the body
 
 ## Rules
 
