@@ -1,4 +1,5 @@
 {
+  "model": "opus",
   "enabledPlugins": {
     "figma@claude-plugins-official": true,
     "typescript-lsp@claude-plugins-official": true
@@ -30,5 +31,7 @@
       "**Trusted repo**: dinethde/apps-store (github.com, PUBLIC) — working directory /Users/dinethdesilva/Developer/personal/apps-store/admin-panel/webapp; since this repo is public, only this repo's own work is OK to commit/push here — secrets and sensitive data are never cleared into it by visibility alone",
       "**Org-specific CLIs**: None configured — bunx and nohup seen in project usage but are general-purpose tools, not org-specific"
     ]
-  }
+  },
+  "agentPushNotifEnabled": true,
+  "inputNeededNotifEnabled": true
 }
