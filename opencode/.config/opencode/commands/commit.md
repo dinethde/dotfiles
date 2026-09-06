@@ -63,17 +63,10 @@ After the prefix, the description stays lowercase (e.g., `feat: add user dashboa
 - Wrap at ~72 characters per line
 - Use normal sentence casing in the body
 
-### Additional rules
-
-- Never create a commit that mixes unrelated changes
-- If a single file contains changes for multiple logical units, stage only the relevant hunks (use `git add -p` if needed)
-- Never commit secrets or keys
-- Proofread before committing — it becomes permanent project history
-- Note any breaking changes or side effects explicitly in the body
-
 ## Rules
 
 - Never create a commit that mixes unrelated changes.
+- Always add a prefix and keep the header bellow 50 characters
 - If a single file contains changes for multiple logical units, stage only the relevant hunks (use `git add -p` if needed).
 - Never commit secrets or keys.
 - If something cannot be cleanly split, explain the issue and ask the user before proceeding.
