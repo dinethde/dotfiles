@@ -120,3 +120,7 @@ claude/.claude/*
 !claude/.claude/CLAUDE.md
 !claude/.claude/commands
 !claude/.claude/commands/**
+claude/.claude.json
+
+# Graphify
+graphify-out/
