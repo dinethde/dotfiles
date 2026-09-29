@@ -124,3 +124,8 @@ claude/.claude.json
 
 # Graphify
 graphify-out/
+
+# tmux plugins installed by tpm - each is its own git clone, so tracking
+# them here would create embedded repositories. tpm reinstalls them from
+# the @plugin list in .tmux.conf.
+tmux/.tmux/plugins/
